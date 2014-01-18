@@ -70,3 +70,19 @@ input, select {
   a:hover {
     color: #666;
   }
+
+  @media only screen
+  and (min-device-width : 320px)
+  and (max-device-width : 568px) {
+    html, body h2 {
+      font-size: 35px;
+    }
+
+    article {
+      font-size: 18px;
+      text-align: center;
+      width: 250px;
+      display: inline-block;
+      line-height: 25px;
+    }
+  }
