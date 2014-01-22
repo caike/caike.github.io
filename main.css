@@ -75,14 +75,14 @@ input, select {
   and (min-device-width : 320px)
   and (max-device-width : 568px) {
     html, body h2 {
-      font-size: 35px;
+      font-size: 95px;
     }
 
     article {
-      font-size: 18px;
+      font-size: 42px;
       text-align: center;
-      width: 250px;
+      width: 645px;
       display: inline-block;
-      line-height: 25px;
+      line-height: 55px;
     }
   }
