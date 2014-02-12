@@ -43,6 +43,12 @@ mark {
 input, select {
   vertical-align: middle; }
 
+
+  /* Custom CSS starts here */
+
+@import "font-awesome";
+
+
   html, body {
     font-family: 'Merriweather', serif;
     color: #333333;
@@ -86,3 +92,16 @@ input, select {
       line-height: 55px;
     }
   }
+
+  .social {
+    a:link, a:visited {
+      text-decoration: none;
+    }
+    i {
+      font-size: 32px;
+    }
+    span {
+      font-size: 20px;
+    }
+  }
+
