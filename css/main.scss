@@ -77,6 +77,18 @@ input, select {
     color: #666;
   }
 
+  .social {
+    a:link, a:visited {
+      text-decoration: none;
+    }
+    i {
+      font-size: 42px;
+    }
+    span {
+      font-size: 30px;
+    }
+  }
+
   @media only screen
   and (min-device-width : 320px)
   and (max-device-width : 568px) {
@@ -91,17 +103,15 @@ input, select {
       display: inline-block;
       line-height: 55px;
     }
-  }
 
-  .social {
-    a:link, a:visited {
-      text-decoration: none;
-    }
-    i {
-      font-size: 32px;
-    }
-    span {
-      font-size: 20px;
+    .social {
+      margin-top: 100px;
+      i {
+        font-size: 130px;
+      }
+      span {
+        font-size: 90px;
+      }
     }
   }
 
