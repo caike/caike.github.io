@@ -44,74 +44,85 @@ input, select {
   vertical-align: middle; }
 
 
-  /* Custom CSS starts here */
+/* Custom CSS starts here */
 
 @import "font-awesome";
 
+html, body {
+  font-family: 'Merriweather', serif;
+  color: #333333;
+  text-align: center;
+}
 
-  html, body {
-    font-family: 'Merriweather', serif;
-    color: #333333;
-    text-align: center;
+html, body h2 {
+  font-size: 72px;
+  margin-top: 5%;
+  margin-bottom: 15px;
+}
+
+article {
+  font-size: 20px;
+  text-align: center;
+  width: 500px;
+  display: inline-block;
+  line-height: 28px;
+}
+
+a, a:visited {
+  color: #CCC;
+}
+
+a:hover {
+  color: #666;
+}
+
+.social {
+  a:link, a:visited {
+    text-decoration: none;
   }
 
+  a[href="https://twitter.com/caike"]:hover {
+    i {
+      color: #4099FF;
+
+      transform:rotate(10deg);
+      -ms-transform:rotate(10deg); /* IE 9 */
+      -webkit-transform:rotate(10deg); /* Safari and Chrome */
+    }
+  }
+
+  i {
+    font-size: 42px;
+  }
+
+  span {
+    font-size: 30px;
+  }
+}
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px) {
   html, body h2 {
-    font-size: 72px;
-    margin-top: 5%;
-    margin-bottom: 15px;
+    font-size: 95px;
   }
 
   article {
-    font-size: 20px;
+    font-size: 42px;
     text-align: center;
-    width: 500px;
+    width: 645px;
     display: inline-block;
-    line-height: 28px;
-  }
-
-  a, a:visited {
-    color: #CCC;
-  }
-
-  a:hover {
-    color: #666;
+    line-height: 55px;
   }
 
   .social {
-    a:link, a:visited {
-      text-decoration: none;
-    }
+    margin-top: 100px;
     i {
-      font-size: 42px;
+      font-size: 130px;
     }
     span {
-      font-size: 30px;
+      font-size: 90px;
     }
   }
-
-  @media only screen
-  and (min-device-width : 320px)
-  and (max-device-width : 568px) {
-    html, body h2 {
-      font-size: 95px;
-    }
-
-    article {
-      font-size: 42px;
-      text-align: center;
-      width: 645px;
-      display: inline-block;
-      line-height: 55px;
-    }
-
-    .social {
-      margin-top: 100px;
-      i {
-        font-size: 130px;
-      }
-      span {
-        font-size: 90px;
-      }
-    }
-  }
+}
 
