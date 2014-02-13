@@ -77,6 +77,13 @@ a:hover {
 }
 
 .social {
+
+  padding: 15px;
+
+  ul > li {
+    margin-bottom: -15px;
+  }
+
   a:link, a:visited {
     text-decoration: none;
   }
@@ -116,6 +123,9 @@ and (max-device-width : 568px) {
   }
 
   .social {
+    ul > li {
+      padding-bottom: 20px;
+    }
     margin-top: 100px;
     i {
       font-size: 130px;
