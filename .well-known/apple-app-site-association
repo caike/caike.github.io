@@ -4,14 +4,16 @@
     "details": [
       {
         "appID": "PM94W9VZU5.com.fanjolt.fanjolt",
+        "paths": [
+          "/c/*",
+          "/bc/*"
+        ],
         "components": [
           {
-            "/": "/c/*",
-            "comment": "Matches any URL whose path starts with /c/"
+            "/": "/c/*"
           },
           {
-            "/": "/bc/*",
-            "comment": "Matches any URL whose path starts with /bc/"
+            "/": "/bc/*"
           }
         ]
       }
