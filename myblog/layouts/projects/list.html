@@ -4,6 +4,10 @@
   A project without it links to its own page.
   Optional `icon`: a path under assets/ (for example 'images/projects/x.png').
   Optional `linkLabel`: text under the summary (default: the externalUrl domain).
+  Optional `retired = true`: shows a "Retired" label and a muted style.
+  Optional `[[stats]]` with `value` and `label`: a row of small stats under the summary.
+  Optional `fullSummary = true`: shows the full summary (PaperMod cuts it to 2 lines).
+  Optional `hideLinkLabel = true`: hides the link label. The card still links to externalUrl.
   Order: `weight` front matter (low first).
 */ -}}
 {{- define "main" }}
@@ -21,8 +25,9 @@
 
 {{- range .Pages.ByWeight }}
 {{- $external := .Params.externalUrl }}
+{{- $fullSummary := .Params.fullSummary }}
 {{- $href := $external | default .RelPermalink }}
-<article class="post-entry project-entry">
+<article class="post-entry project-entry{{ if .Params.retired }} project-retired{{ end }}">
   {{- with .Params.icon }}
   {{- with resources.Get . }}
   {{- $img := .Process "fill 128x128 webp" }}
@@ -34,14 +39,22 @@
     <h2 class="entry-hint-parent">
       {{- .Title }}
       {{- if $external }}<span class="entry-hint" aria-hidden="true">&nbsp;↗</span>{{ end }}
+      {{- if .Params.retired }}<span class="project-badge">Retired</span>{{ end }}
     </h2>
   </header>
   {{- with .Summary }}
-  <div class="entry-content">
+  <div class="entry-content{{ if $fullSummary }} project-full-summary{{ end }}">
     <p>{{ . | plainify | htmlUnescape }}</p>
   </div>
   {{- end }}
-  {{- if $external }}
+  {{- with .Params.stats }}
+  <ul class="project-stats">
+    {{- range . }}
+    <li><strong>{{ .value }}</strong> {{ .label }}</li>
+    {{- end }}
+  </ul>
+  {{- end }}
+  {{- if and $external (not .Params.hideLinkLabel) }}
   <footer class="entry-footer">{{ .Params.linkLabel | default ((urls.Parse $external).Host | strings.TrimPrefix "www.") }}</footer>
   {{- end }}
   </div>
