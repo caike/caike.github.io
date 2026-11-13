@@ -1,0 +1,18 @@
+/* Projects list (layouts/projects/list.html). PaperMod loads assets/css/extended/ automatically. */
+.project-entry {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.project-icon {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  margin: 0;
+}
+
+.project-body {
+  min-width: 0;
+}

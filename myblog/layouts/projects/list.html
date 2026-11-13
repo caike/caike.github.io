@@ -1,0 +1,53 @@
+{{- /*
+  Projects list. Overrides PaperMod's list.html for the "projects" section only.
+  A project with `externalUrl` in its front matter links to that site.
+  A project without it links to its own page.
+  Optional `icon`: a path under assets/ (for example 'images/projects/x.png').
+  Optional `linkLabel`: text under the summary (default: the externalUrl domain).
+  Order: `weight` front matter (low first).
+*/ -}}
+{{- define "main" }}
+
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+  {{- with .Description }}
+  <div class="post-description">{{ . | markdownify }}</div>
+  {{- end }}
+</header>
+
+{{- with .Content }}
+<div class="post-content md-content">{{ . }}</div>
+{{- end }}
+
+{{- range .Pages.ByWeight }}
+{{- $external := .Params.externalUrl }}
+{{- $href := $external | default .RelPermalink }}
+<article class="post-entry project-entry">
+  {{- with .Params.icon }}
+  {{- with resources.Get . }}
+  {{- $img := .Process "fill 128x128 webp" }}
+  <img class="project-icon" src="{{ $img.RelPermalink }}" width="64" height="64" alt="" loading="lazy">
+  {{- end }}
+  {{- end }}
+  <div class="project-body">
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">
+      {{- .Title }}
+      {{- if $external }}<span class="entry-hint" aria-hidden="true">&nbsp;↗</span>{{ end }}
+    </h2>
+  </header>
+  {{- with .Summary }}
+  <div class="entry-content">
+    <p>{{ . | plainify | htmlUnescape }}</p>
+  </div>
+  {{- end }}
+  {{- if $external }}
+  <footer class="entry-footer">{{ .Params.linkLabel | default ((urls.Parse $external).Host | strings.TrimPrefix "www.") }}</footer>
+  {{- end }}
+  </div>
+  <a class="entry-link" aria-label="{{ .Title | plainify }}" href="{{ $href }}"
+    {{- if $external }} target="_blank" rel="noopener"{{ end }}></a>
+</article>
+{{- end }}
+
+{{- end }}

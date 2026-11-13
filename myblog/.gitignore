@@ -1,0 +1,10 @@
+# Hugo build output and cache
+/public/
+/resources/_gen/
+.hugo_build.lock
+
+# Editor files
+*.swp
+*.swo
+*~
+.DS_Store

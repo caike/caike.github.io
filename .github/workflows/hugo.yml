@@ -1,0 +1,69 @@
+# Build the Hugo site in myblog/ and publish it to GitHub Pages.
+# Repo setting needed once: Settings > Pages > Build and deployment > Source = "GitHub Actions".
+name: Deploy Hugo site to Pages
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Do one deploy at a time. Do not cancel a deploy that is in progress.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: 0.161.1
+      HUGO_ENVIRONMENT: production
+      HUGO_ENV: production
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Set up Go (for Hugo modules)
+        uses: actions/setup-go@v7
+        with:
+          go-version-file: myblog/go.mod
+          cache-dependency-path: myblog/go.sum
+
+      - name: Install Hugo extended
+        run: |
+          wget -nv -O "${{ runner.temp }}/hugo.deb" \
+            "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb"
+          sudo dpkg -i "${{ runner.temp }}/hugo.deb"
+          hugo version
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v6
+
+      - name: Build
+        working-directory: myblog
+        run: hugo --gc --minify
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: myblog/public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

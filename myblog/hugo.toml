@@ -1,0 +1,69 @@
+baseURL = 'https://csouza.me/'
+title = 'Carlos Souza'
+locale = 'en-us'
+enableRobotsTXT = true
+
+[module]
+  [[module.imports]]
+    path = 'github.com/adityatelange/hugo-PaperMod'
+
+[pagination]
+  pagerSize = 10
+
+[taxonomies]
+  tag = 'tags'
+
+[outputs]
+  home = ['HTML', 'RSS', 'JSON']
+
+[services.rss]
+  limit = 10
+
+[params]
+  env = 'production'
+  description = 'Software engineer, educator and consultant.'
+  author = 'Carlos Souza'
+  defaultTheme = 'light'
+  disableThemeToggle = true
+  mainSections = ['posts']
+  DateFormat = '2 January 2006'
+  ShowReadingTime = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+  TocOpen = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = false
+  ShowShareButtons = false
+  disableSpecial1stPost = true
+
+  [[params.socialIcons]]
+    name = 'github'
+    url = 'https://github.com/caike'
+  [[params.socialIcons]]
+    name = 'linkedin'
+    url = 'https://www.linkedin.com/in/carlos-souza/'
+  [[params.socialIcons]]
+    name = 'rss'
+    url = '/index.xml'
+
+[[menu.main]]
+  name = 'Projects'
+  url = '/projects/'
+  weight = 10
+[[menu.main]]
+  name = 'Posts'
+  url = '/posts/'
+  weight = 20
+[[menu.main]]
+  name = 'Tags'
+  url = '/tags/'
+  weight = 30
+[[menu.main]]
+  name = 'About'
+  url = '/about/'
+  weight = 40
+
+[markup.goldmark.renderer]
+  unsafe = true
+[markup.highlight]
+  noClasses = false
