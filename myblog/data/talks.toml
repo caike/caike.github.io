@@ -1,0 +1,150 @@
+# Talks shown on /talks/ (layouts/talks/list.html).
+# Source: https://speakerdeck.com/caike.atom (pulled 2026-11-13).
+# `date` is the Speaker Deck upload date. `lang = 'pt'` shows a "Português" label.
+# `youtube = '<video id>'` shows an embedded player on the card.
+
+[[talks]]
+title = 'Engineering Network Protocol Clients'
+date = 2025-08-28
+url = 'https://www.youtube.com/watch?v=h_WAPbfur7M'
+youtube = 'h_WAPbfur7M'
+event = 'ElixirConf US 2025'
+summary = 'Elixir tools for a blockchain node: a WebSocket client and a custom binary protocol client, and how OTP helps with the problems.'
+
+[[talks]]
+title = 'Bibliotecas Elixir para Redes Descentralizadas'
+date = 2025-08-01
+url = 'https://www.youtube.com/watch?v=tHhjyyENoK0'
+youtube = 'tHhjyyENoK0'
+event = 'Elixir Carajás Meetup 004'
+lang = 'pt'
+summary = 'How to use Elixir to connect to blockchain networks and get data from them, with tools for the Cardano network.'
+
+[[talks]]
+title = 'Thinking Functionally with Elixir'
+date = 2019-03-12
+url = 'https://www.youtube.com/watch?v=_A_OE3cESnM'
+youtube = '_A_OE3cESnM'
+event = 'Orlando Backend Developers Meetup'
+summary = 'The main features of Elixir, and techniques to write functional programs that are as readable as programs in non-functional languages.'
+
+[[talks]]
+title = 'Deploying Elixir'
+date = 2021-08-11
+url = 'https://speakerdeck.com/caike/deploying-elixir'
+summary = 'Two strategies to publish Elixir applications.'
+
+[[talks]]
+title = 'Thinking Functionally with Elixir'
+date = 2019-09-20
+url = 'https://speakerdeck.com/caike/thinking-functionally-with-elixir'
+summary = 'How to use pure functions, pattern matching, the pipe operator and recursion to write readable and efficient programs for the BEAM.'
+
+[[talks]]
+title = 'Essential JavaScript for working with React'
+date = 2018-07-12
+url = 'https://speakerdeck.com/caike/essential-javascript-for-working-with-react'
+summary = 'The JavaScript you must know to work with React.'
+
+[[talks]]
+title = 'Estruturas de Dados na Prática'
+date = 2017-05-18
+url = 'https://speakerdeck.com/caike/estruturas-de-dados-na-pratica'
+event = 'CEJS, Fortaleza'
+lang = 'pt'
+summary = 'Native JavaScript data structures and how to use them to write more efficient code.'
+
+[[talks]]
+title = 'Docker in Practice'
+date = 2016-12-13
+url = 'https://speakerdeck.com/caike/docker-in-practice'
+summary = 'Problems with non-trivial architectures and how Docker can help.'
+
+[[talks]]
+title = 'Turbolinks and Rails'
+date = 2016-02-15
+url = 'https://www.youtube.com/watch?v=kvRv1tb8W_g'
+youtube = 'kvRv1tb8W_g'
+event = 'Orlando Devs Meetup'
+
+[[talks]]
+title = 'Repensando Melhores Práticas'
+date = 2015-11-25
+url = 'https://speakerdeck.com/caike/repensando-melhores-praticas'
+lang = 'pt'
+summary = 'New tools and paradigms change the best way to write code for browsers and servers.'
+
+[[talks]]
+title = 'Data Structures in JavaScript (ES2015)'
+date = 2015-09-30
+url = 'https://speakerdeck.com/caike/data-structures-in-javascript-es2015'
+event = 'Orlando JavaScript meetup'
+
+[[talks]]
+title = 'Building Better Web APIs with Rails'
+date = 2015-04-03
+url = 'https://speakerdeck.com/caike/building-better-web-apis-with-rails-1'
+event = 'Ancient City Ruby 2015'
+summary = 'What developers must know to make a robust web API with Rails.'
+
+[[talks]]
+title = 'Building Better Web APIs with Rails'
+date = 2014-10-23
+url = 'https://speakerdeck.com/caike/building-better-web-apis-with-rails'
+youtube = 'vt47OSQ2JZc'
+event = 'All Things Open 2014'
+summary = 'What developers must know to make a robust web API with Rails.'
+
+[[talks]]
+title = 'Rock Solid Rails APIs'
+date = 2014-08-31
+url = 'https://speakerdeck.com/caike/rock-solid-rails-apis'
+event = 'RubyConf Brasil 2014'
+lang = 'pt'
+summary = 'Routes, content negotiation, versioning, authentication and tests for HTTP APIs in Rails.'
+
+[[talks]]
+title = 'Ruby Coding Dojo'
+date = 2014-05-04
+url = 'https://speakerdeck.com/caike/ruby-coding-dojo'
+summary = 'A Coding Dojo is a place where developers come together to practice, learn and share knowledge.'
+
+[[talks]]
+title = 'Databases in Node.js'
+date = 2014-03-20
+url = 'https://speakerdeck.com/caike/databases-in-node-dot-js'
+summary = 'How to use PostgreSQL, MongoDB and Redis from Node.js.'
+
+[[talks]]
+title = 'Books Every Ruby on Rails Developer Should Read'
+date = 2013-10-11
+url = 'https://speakerdeck.com/caike/books-every-ruby-on-rails-developer-should-read'
+event = 'Orlando Ruby Users Group'
+
+[[talks]]
+title = 'Como pegar um Trem em movimento'
+date = 2013-08-30
+url = 'https://speakerdeck.com/caike/como-pegar-um-trem-em-movimento'
+event = 'RubyConf Brasil 2013'
+lang = 'pt'
+summary = 'Practices, conventions and tools that help new team members join existing Rails projects.'
+
+[[talks]]
+title = 'Civic Hacking for a better Orlando'
+date = 2013-05-20
+url = 'https://speakerdeck.com/caike/civic-hacking-for-a-better-orlando'
+event = 'BarCamp Orlando 2013'
+summary = 'Civic hacking, open data and examples of civic applications.'
+
+[[talks]]
+title = 'Poderosas Interfaces Rails'
+date = 2012-08-31
+url = 'https://speakerdeck.com/caike/poderosas-interfaces-rails'
+lang = 'pt'
+summary = 'Techniques for loosely coupled components and faster unit tests in Rails applications.'
+
+[[talks]]
+title = 'Powerful Interfaces'
+date = 2012-04-26
+url = 'https://speakerdeck.com/caike/powerful-interfaces'
+summary = 'Interfaces as the foundation for object-oriented design in Ruby and Rails.'

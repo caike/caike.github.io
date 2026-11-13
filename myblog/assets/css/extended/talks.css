@@ -1,0 +1,43 @@
+/* Talks list (layouts/talks/list.html). PaperMod loads assets/css/extended/ automatically. */
+.talks-year {
+  margin: 32px 0 12px;
+  font-size: 20px;
+  color: var(--secondary);
+}
+
+.talk-entry .entry-header h3 {
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.talk-badge {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 2px 8px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--secondary);
+  vertical-align: middle;
+}
+
+/* Embedded YouTube player (data/talks.toml: youtube = '<id>').
+   It sits above the card link (.entry-link), so clicks go to the player. */
+.talk-video {
+  position: relative;
+  z-index: 1;
+  margin-top: 14px;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #000;
+}
+
+.talk-video iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}

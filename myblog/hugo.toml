@@ -55,6 +55,10 @@ enableRobotsTXT = true
   url = '/posts/'
   weight = 20
 [[menu.main]]
+  name = 'Talks'
+  url = '/talks/'
+  weight = 25
+[[menu.main]]
   name = 'Tags'
   url = '/tags/'
   weight = 30

@@ -1,0 +1,53 @@
+{{- /*
+  Talks list. Overrides PaperMod's list.html for the "talks" section only.
+  Data comes from data/talks.toml. Talks show in groups by year, newest first.
+  A talk with `youtube` (a video ID) shows an embedded player.
+*/ -}}
+{{- define "main" }}
+
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+  {{- with .Description }}
+  <div class="post-description">{{ . | markdownify }}</div>
+  {{- end }}
+</header>
+
+{{- with .Content }}
+<div class="post-content md-content">{{ . }}</div>
+{{- end }}
+
+{{- $talks := sort hugo.Data.talks.talks "date" "desc" }}
+{{- $year := "" }}
+{{- range $talks }}
+{{- $y := time.Format "2006" .date }}
+{{- if ne $y $year }}
+{{- $year = $y }}
+<h2 class="talks-year">{{ $y }}</h2>
+{{- end }}
+<article class="post-entry talk-entry">
+  <header class="entry-header">
+    <h3 class="entry-hint-parent">
+      {{- .title }}<span class="entry-hint" aria-hidden="true">&nbsp;↗</span>
+      {{- if eq .lang "pt" }}<span class="talk-badge">Português</span>{{ end }}
+    </h3>
+  </header>
+  {{- with .summary }}
+  <div class="entry-content"><p>{{ . }}</p></div>
+  {{- end }}
+  <footer class="entry-footer">
+    {{- time.Format "January 2006" .date }}
+    {{- with .event }} · {{ . }}{{ end }}
+  </footer>
+  {{- if .youtube }}
+  <div class="talk-video">
+    <iframe src="https://www.youtube-nocookie.com/embed/{{ .youtube }}" title="{{ .title }}: video"
+      loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  {{- end }}
+  <a class="entry-link" aria-label="{{ .title }}" href="{{ .url }}" target="_blank" rel="noopener"></a>
+</article>
+{{- end }}
+
+{{- end }}
