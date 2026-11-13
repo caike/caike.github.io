@@ -20,4 +20,4 @@ When I'm away from the keyboard I'm probably making coffee.
 
 ## Get in touch
 
-Hit me up if you'd like to chat: **carlos(AT)csouza.me**. You can also find me on [GitHub](https://github.com/caike) and [LinkedIn](https://www.linkedin.com/in/carlos-souza/).
+Hit me up if you'd like to chat: **carlos(AT)csouza.me**. You can also find me on [GitHub](https://github.com/caike) and [LinkedIn](https://www.linkedin.com/in/caike/).

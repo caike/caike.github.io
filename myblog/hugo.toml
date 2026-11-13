@@ -41,7 +41,7 @@ enableRobotsTXT = true
     url = 'https://github.com/caike'
   [[params.socialIcons]]
     name = 'linkedin'
-    url = 'https://www.linkedin.com/in/carlos-souza/'
+    url = 'https://www.linkedin.com/in/caike/'
   [[params.socialIcons]]
     name = 'rss'
     url = '/index.xml'
