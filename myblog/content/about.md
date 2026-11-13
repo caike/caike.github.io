@@ -14,7 +14,7 @@ Hi, I'm Carlos. I'm a technologist and I have been writing software professional
 
 - **Consulting.** I build software for clients.
 - **Products.** I build small, focused apps such as [Zippato](https://zippato.com/), [FindMyTris](https://findmytris.com/) and [Nidra iOS](https://apps.apple.com/us/app/nidra-yoga-nidra-deep-rest/id6758237848).
-- **Teaching.** I'm a published [Pluralsight author](https://app.pluralsight.com/profile/author/carlos-souza) with over 50 courses.
+- **Teaching.** I'm a published [Pluralsight author](https://app.pluralsight.com/profile/author/carlos-souza) with over 50 courses. I also give [talks](/talks/) at conferences and meetups.
 
 When I'm away from the keyboard I'm probably making coffee.
 
